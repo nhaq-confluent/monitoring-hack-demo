@@ -8,6 +8,7 @@ const LineChart = ({ data, axisY, axisX }) => {
       curve="natural"
       enablePoints={false}
       enableArea={true}
+      enableGridY={false}
       margin={{ top: 50, right: 110, bottom: 125, left: 60 }}
       xScale={{ type: "point" }}
       yScale={{
@@ -23,9 +24,9 @@ const LineChart = ({ data, axisY, axisX }) => {
       axisBottom={{
         tickSize: 5,
         tickPadding: 5,
-        tickRotation: 0,
+        tickRotation: -45,
         legend: axisX,
-        legendOffset: 36,
+        legendOffset: 100,
         legendPosition: "middle",
       }}
       axisLeft={{
@@ -44,11 +45,11 @@ const LineChart = ({ data, axisY, axisX }) => {
       useMesh={true}
       legends={[
         {
-          anchor: "bottom",
+          anchor: "top",
           direction: "row",
           justify: false,
           translateX: 0,
-          translateY: 100,
+          translateY: -50,
           itemsSpacing: 0,
           itemDirection: "left-to-right",
           itemWidth: 160,
